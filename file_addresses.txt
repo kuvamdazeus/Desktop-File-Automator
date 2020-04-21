@@ -1,4 +1,11 @@
+Try entering the destinations for the specified file type or leave them them as it is,
+full file path should be entered avoiding use of relative paths to avoid failures,
+
+
 Text File : None
+
 Python Files : None
+
 Bash Files : None
+
 Images : None
