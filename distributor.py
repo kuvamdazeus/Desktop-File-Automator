@@ -1,39 +1,32 @@
 #! /usr/bin/env python3
-import re, os
+import os, re
 def process_destination():
     file = open("file_addresses.txt")
-    place_pattern = r"\s?:\s?([a-zA-Z/_~]+)"
-    string_places = []
+    place_pattern = r"\s?:\s?([a-zA-Z/_])"
     places = []
     for line in file:
         place = re.search(place_pattern, line)
-        places.append(place.group(1))
+        places.append(place)
     file.close()
-    print(places)
     return places
 
 def move(places):
     text, python, bash, image = places
-    print(text, python, bash, image)
+    text = text.group()
+    python = python.group()
+    image = image.group()
     # check that the pattern is right or not
     # Try from here :)
     # search for "how to find the type of file in python3"
-    os.chdir("./Distributor")
-    files = os.listdir()
-    os.chdir("..")
-    print(files)
-    for file in files:
-        print(file)
-        if file == "distributor.py" or file == "file_addresses.txt" or file == "setup.sh":
-            continue
+    for file in os.listdir():
         if ".txt" in file and os.path.exists(text):
-            os.system("mv ./Distributor/{} {}".format(file, text))
+            os.system("mv {} {}".format(file, text))
         elif ".py" in file and os.path.exists(python):
-            os.system("mv ./Distributor/{} {}".format(file, python))
+            os.system("mv {} {}".format(file, python))
         elif ".sh" in file and os.path.exists(bash):
-            os.system("mv ./Distributor/{} {}".format(file, bash))
+            os.system("mv {} {}".format(file, bash))
         elif (".jpg" in file or "png" in file or ".jpeg" in file) and os.path.exists(image):
-            os.system("mv ./Distributor/{} {}".format(file, image))
+            os.system("mv {} {}".format(file, image))
 
 def main():
     move(process_destination())
