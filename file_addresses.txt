@@ -1,4 +1,4 @@
-Text File : /Users/kuvambhardwaj/Documents
-Python Files : /Users/kuvambhardwaj/Documents
+Text File : None
+Python Files : None
 Bash Files : None
 Images : None
