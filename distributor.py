@@ -1,18 +1,24 @@
 #! /usr/bin/env python3
-import re, os
+import re, os, sys
 def process_destination():
     file = open("file_addresses.txt")
-    place_pattern = r"\s?:\s?([a-zA-Z/_~]+)" # pattern to extract the file name from file_addresses.txt
+    place_pattern = r"\s?:\s?([a-zA-Z0-9\-/_]+)" # pattern to extract the file name from file_addresses.txt
     places = []
     for line in file:
         place = re.search(place_pattern, line)
-        places.append(place.group(1)) # extract and append in places list
+        if place != None:
+            places.append(place.group(1)) # extract and append in places list
+    print(places)
     file.close()
     print(places)
     return places
 
 def move(places): # places is the list of destinations provided in the file_addresses.txt
-    text, python, bash, image = places
+    try:
+        text, python, bash, image = places
+    except Exception:
+        print("File file_addresses.txt was edited or is corrupted")
+        sys.exit(1)
     # print(text, python, bash, image)
     # Try from here :)
     os.chdir("./Distributor")

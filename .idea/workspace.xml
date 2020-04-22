@@ -4,10 +4,8 @@
     <list default="true" id="1174b90d-e5ff-4dba-aaad-771474ec9c4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/distributor.py" beforeDir="false" afterPath="$PROJECT_DIR$/distributor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file_addresses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file_addresses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
