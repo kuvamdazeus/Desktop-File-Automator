@@ -49,4 +49,5 @@ def move(places): # places is the list of destinations provided in the file_addr
 def main():
     move(process_destination())
 
-main()
+while True:
+  main()
