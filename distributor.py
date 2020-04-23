@@ -53,6 +53,7 @@ def move(places): # places is the list of destinations provided in the file_addr
             count += 1
             print("{}. {}".format(file))
         sys.exit(0)
+    os.chdir("..")
 
 def main():
     move(process_destination())
