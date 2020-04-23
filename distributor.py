@@ -46,7 +46,6 @@ def move(places): # places is the list of destinations provided in the file_addr
     os.chdir("./Distributor")
     if len(os.listdir()) is 0:
         print("{} Files transfered successfully".format(len(files)))
-        sys.exit(0)
     else:
         print("Remaining files: ")
         count = 0
